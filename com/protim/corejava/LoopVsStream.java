@@ -9,9 +9,7 @@ import java.util.List;
 public class LoopVsStream {
 
     static final int DATA_SIZE = 60_000_000;
-
     static List<Long> dataset = new ArrayList<>(DATA_SIZE);
-
 
     static {
         for(int i = 0; i < DATA_SIZE; i++){
@@ -50,36 +48,38 @@ public class LoopVsStream {
             sumByParallelStream();
         }
         System.out.println("JVM warmup completed...");
+        System.out.println(MessageFormat.format("Data Set Size: {0}", DATA_SIZE));
+
         long startTime;
         long sum;
 
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         sum = sumByLoop();
-        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2}ms",
+        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2} nano seconds",
                 "Loop",
                 sum,
-                (System.currentTimeMillis()-startTime)));
+                (System.nanoTime()-startTime)));
 
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         sum = sumByStream();
-        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2}ms",
+        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2} nano seconds",
                 "Stream",
                 sum,
-                (System.currentTimeMillis()-startTime)));
+                (System.nanoTime()-startTime)));
 
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         sum = sumByLongStream();
-        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2}ms",
+        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2} nano seconds",
                 "Int Stream",
                 sum,
-                (System.currentTimeMillis()-startTime)));
+                (System.nanoTime()-startTime)));
 
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         sum = sumByParallelStream();
-        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2}ms",
+        System.out.println(MessageFormat.format("Operation: {0} | Sum: {1} | Time Taken: {2} nano seconds",
                 "Parallel Stream",
                 sum,
-                (System.currentTimeMillis()-startTime)));
+                (System.nanoTime()-startTime)));
     }
 
 

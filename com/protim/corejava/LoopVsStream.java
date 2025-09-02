@@ -8,7 +8,7 @@ import java.util.List;
 
 public class LoopVsStream {
 
-    static final int DATA_SIZE = 60_000_000;
+    static final int DATA_SIZE = 100;
     static List<Long> dataset = new ArrayList<>(DATA_SIZE);
 
     static {

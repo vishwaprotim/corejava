@@ -6,7 +6,7 @@ public class SelectionSort {
 
     /*
         Check the details and write up here:
-        https://github.com/vishwaprotim/corejava/wiki/02.-Selection-Sort
+        https://github.com/vishwaprotim/corejava/wiki/Sorting-Algorithms#2-selection-sort
      */
 
 

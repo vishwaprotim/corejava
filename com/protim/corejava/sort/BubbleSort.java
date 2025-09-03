@@ -6,7 +6,7 @@ public class BubbleSort {
 
     /*
         Check the details and write up here:
-        https://github.com/vishwaprotim/corejava/wiki/01.-Bubble-Sort
+        https://github.com/vishwaprotim/corejava/wiki/Sorting-Algorithms#1-bubble-sort
      */
 
 

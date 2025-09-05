@@ -6,7 +6,7 @@ public class InsertionSort {
 
     /*
         Check the details and write up here:
-        https://github.com/vishwaprotim/corejava/wiki/Sorting-Algorithms#1-insertion-sort
+        https://github.com/vishwaprotim/corejava/wiki/Sorting-Algorithms#3-insertion-sort
      */
 
     public static int[] insertionSort(int[] arr){

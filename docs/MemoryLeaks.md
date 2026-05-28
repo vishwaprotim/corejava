@@ -77,6 +77,6 @@ Install VisualVM from here: https://visualvm.github.io/download.html
 - Launch visualVM
 - Diagnose the program in debug mode
 
-![Memory Leak](./resources/Memory Leak.png)
+![Memory Leak](./resources/MemoryLeak.png)
 
 ![Out of Memory Error](./resources/OOME.png)
